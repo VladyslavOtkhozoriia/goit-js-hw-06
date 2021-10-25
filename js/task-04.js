@@ -8,7 +8,7 @@ const decrementBtnRef = document.querySelector('[data-action = "decrement"]');
 
 const onDecrementBtnRefClick = () => {
   counterValue -= 1;
-  valueRef.innerHTML = counterValue;
+  valueRef.textContent = counterValue;
 };
 
 decrementBtnRef.addEventListener("click", onDecrementBtnRefClick);
@@ -19,7 +19,7 @@ const incrementBtnRef = document.querySelector('[data-action = "increment"]');
 
 const onIncrementBtnRefClick = () => {
   counterValue += 1;
-  valueRef.innerHTML = counterValue;
+  valueRef.textContent = counterValue;
 };
 
 incrementBtnRef.addEventListener("click", onIncrementBtnRefClick);
