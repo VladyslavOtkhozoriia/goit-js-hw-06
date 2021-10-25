@@ -15,12 +15,13 @@ const images = [
 
 const galleryRef = document.querySelector(".gallery");
 
-images.forEach((image) => {
-  galleryRef.insertAdjacentHTML(
-    "afterbegin",
-    `<li> <img class = "images-item" src = "${image.url}" alt = "${image.alt}" width = "400px"  </li>`
-  );
-});
+const makeFunctionGalleryRef = ({ url, alt }) => {
+  return `<li class = "imageGallery"> <img src = "${url}" alt = "${alt}" width = 450 </li>`;
+};
+
+const galleryElements = images.map(makeFunctionGalleryRef).join(" ");
+galleryRef.insertAdjacentHTML("afterbegin", galleryElements);
+
 
 //* JS-STYlES
 galleryRef.style.listStyle = "none";
